@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Rubik+Mono+One&display=swap" rel="stylesheet">
+    <style>
+        html {font-family: 'Rubik Mono One', sans-serif; font-family: 'Black Han Sans', sans-serif;color:#282322}
+        body, h1,h2,h3, p {margin:0; padding:0;}
+        h1 {font-weight:900;font-size:60px; margin-bottom:5px; letter-spacing :4px;}
+        h2{font-size:40px; line-height: 1.2; margin-bottom: 10px;letter-spacing :2px;}
+        h3{font-size:28px; line-height: 1.5;}
+        p{font-size:23px;letter-spacing: -1px; word-spacing: -2px; line-height: 1.3; word-break: keep-all; }
+        section{position: relative;}
+        section .wrap{ position: relative;}
+        #monitor{position: fixed; background: black;padding: 5px; top:0; right:0;width: 70px;height:20px; color:white;}
+        
+
+        .wrap{width:1000px; margin:auto; height:600px;position:relative;}
+        .wrap2{width:1000px; margin:auto; height:600px;position:relative;}
+        .textbox{position:absolute;}
+        header .wrap {width:100%; height:900px; overflow: hidden;}
+        #dj{position:absolute;width:410px; top:170px; left:780px;opacity: 1;}
+        #box1{position:absolute; top:160px;opacity: 1; z-index: 2;}
+        #button{width:200px; height:50px; border-bottom-right-radius: :200px; background-color:#FC3922;margin-top: 20px;}
+        #button:hover{background-color:#CE2410;}
+        .EDMpic{width:320px; height: 320px;margin-right:0px;background-color: red; border-radius: 100%;}
+        .EDMpic2{margin:0px;width:312px; height: 312px;background-color: red; border-radius: 100%; }
+        #EDMpic3{margin:0px;width:600px; top:0px; background-color: red; }
+        .EDMS {width:300px; margin-right:32px;display: block;float:left;}
+        
+        .EDMS h3{text-align: center; margin-top:40px;font-size: 25px;}
+        .EDMS p{text-align:center;font-size: 21px;}
+        #EDM {position:absolute; top:320px; opacity: 0; z-index:1; }
+        #back {width:100%; background-attachment: fixed;}
+        #head1 {position:fixed; width:300px;top:30px; left:68px;margin:0;opacity:0; z-index: 2;}
+        #lou{width:1400px;position: absolute; left: 500px; top:300px;opacity: 0;}
+        #text1{position: absolute; top:200px;}
+        #top1{position:sticky;left:0;top:-50px; width:100%; z-index:1; opacity: 0;}
+        #top2{width:20%;position:fixed;left:0px; top:400px;z-index:1;opacity: 0;}
+        #top3{width:30%;position:fixed;left:350px; top:400px;z-index:1;opacity: 0;}
+    
+        #text2{position:fixed; width:400px; z-index: 2; color:white; left:850px; top:250px; opacity:0;}
+        #text3{position: absolute; top:2000px; left: 850px;}
+        #cam{position:fixed;top:0; left:250px;}
+        #disert1{position: absolute;top:20px;}
+        #disert2{position: absolute;top:-70px; width:400px;left:50%;transform: translateX(-50%);opacity: 0;}
+        #disert3{position: absolute;top:-160px;width: 300px;left:50%;transform: translateX(-50%);opacity: 0;}
+        #text4{position: absolute;top:300px; left:50%;transform: translateX(-50%);top:}
+
+
+
+        .pan{background: black; height:700px;
+                opacity: 0.4; transition: all 1s;}
+        .pan:hover{ opacity: 0.7; }
+        h5{ font-size: 50px; 
+            font-weight: 900;
+            line-height: 1.3;
+            letter-spacing: -1px;
+            position: absolute;}
+
+        img{ position: absolute; }
+        .bold{color:black;}
+        
+        .t1{left:400px; top:400px;width :300px; float:right;}
+        .h4{left:0px; top:0px;}
+        .h5{left:900px; top:-300px; }
+        .h6{left:000px; top:-300px;}
+        .t2{left:500px; top:1000px;}
+        .h6{left:0px; top:300px;}
+        .i1{left:-200px; top:-200px;}
+        .t3{left:400px; top:-800px;width :900px; float:left;}
+        
+        .s1 .wrap{height: 400px; }
+        .s2 .wrap{height: 500px; }
+        .s3 .wrap{height: 800px; }
+        .s4 .wrap{height: 600px; }
+        .s5 .wrap{height: 600px; top:-100px;}
+        .s6 .wrap{height: 600px; top:-130px;}
+        .s7 .wrap{height: 600px; top:-230px;}
+        .s8 .wrap{height: -100px; top:-600px;}
+        .s9 .wrap{height: 600px; top:-230px;}
+        
+
+        section{display: none;}
+        footer{background:black; display: none;}
+        
+
+        footer .wrap{height:100px; }
+        footer p{ text-align: center; color: white; width:inherit; 
+            padding-top: 50px;}
+
+
+        @keyframes fly{
+            to{left:1000px; top:-500px; opacity: 0;}
+        }
+        @keyframes disappear{
+            to{opacity:0; top:130px;}
+        }
+        @keyframes disappear2{
+            from{opacity: 1;}
+            to{opacity: 0;}
+        }
+        @keyframes appear{
+            to{opacity: 1; top:70px;}
+        }
+        @keyframes appear2{
+            to{opacity: 1;}
+        }
+        @keyframes appear3{
+            to{opacity:1; top:200px;}
+        }
+        @keyframes big{
+            to{width:100%;}
+        }
+        @keyframes side{
+            to{left:300px; opacity: 1;}
+        }
+        @keyframes color{
+            to{color:white;}
+        }
+        @keyframes small{
+            to{width:40%;}
+        }
+        @keyframes disappear3{
+            from{width:40%;}
+            to{width:40%;opacity: 0;}
+        }
+
+        @keyframes dal{
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }
+        @keyframes dal2{
+            from{opacity: 1;}
+            to{opacity: 0;}
+        }
+        
+
+    </style>
+</head>
+<body id="page1" style="height: 800px;overflow-x:hidden;">
+    <header><div class="wrap">
+        <div id="monitor" style="z-index: 3;"></div>
+        <img src="dj4.jpg" id="dj" >
+        <div class="wrap2">
+            <div id="box1">
+            <h1>Enjoy <br>the Music <br>Festival</h1>
+            <p style="font-size: 23px;">어떻게 하면 재밌게 놀 수 있을까요?<br>페스티벌에서 색다른 경험, 추억을 만들어 보아요! </p>
+            <div id="button"><p style="color:white;text-align: center; line-height:50px;">즐기러 떠나기</p></div>
+            </div>
+            
+            <div id = "EDM">
+                <h2 style="text-align: center;font-size: 48px; margin-bottom: 50px;">EDM Festival</h2>
+                <div class = "EDMS">
+                <div class="EDMpic" style="background: url(dj3.png); background-size: cover; background-position: 40 20px;"></div>
+                <h3>Music</h3>
+                <p sytle="letter-spacing :1px;">개성있는 아티스트들의 디제이 셋과 라이브 퍼포먼스 공연까지. <br>이 순간을 즐기세요!</p>
+                </div>
+                
+                <div class="EDMS">
+                <div class="EDMpic" style="background:url(peformance.jpg); background-size: cover;background-position: -78px"></div>
+                <h3>Peformance</h3>
+                <p sytle="letter-spacing :1px;">웅장한 무대와 화려한 조명 그리고 공간을 채우는 관객들.<br>함께 즐겨보세요.</p>
+                </div>
+                
+                <div class="EDMS" style="margin-right: 0px;">
+                <div class="EDMpic" style="background:url(raver2.jpg);background-size: cover;background-position: 0 00px;"></div>
+                    <h3>Ravers</h3>
+                <p sytle="letter-spacing :1px;">새로운 경험을 함께할 멋진 관객들! <br>함께 레이빙을 즐겨보세요</p>
+                </div>  
+            
+            </div>
+        </div>
+    </div>
+</header>
+
+    <section class="s1">
+            <div class="wrap">
+                 <img src="dj2.jpg" id="EDMpic3">
+                <p class="t1" style="top:000px;">
+                    Ultra Music Festival (often abbreviated as UMF) is an annual outdoor electronic music festival that takes place during March in Miami, Florida, United States.[1] The festival was founded in 1999 by Russell Faibisch and Alex Omes and is named after the 1997 Depeche Mode album, Ultra.</p> 
+            </div>
+        </section>
+        <section class="s2">
+            <div class="wrap dgray" style="top:-40px";>
+                <h5 class="h4">ULTRA<br> MUSIC<br>FESTIVAL</h5>
+            </div>
+        </section>
+        <section class="s3">
+            <div class="wrap">
+                <img src="EDC.webp" class="i1" >
+                <h5 class="h5" style="right:800px; top:380px; float:right;">Electirc<br>Daisy Carnival</h5>
+                <p class="t2"  style="top:2000px";>Tomorrowland is a Belgium electronic dance music festival held in Boom, Belgium. Tomorrowland was first held in 2005 and has since become one of the world's largest and most notable music festivals.[2] It now stretches over 2 weekends and it usually sells out in minutes.</p>
+            </div>
+        </section>
+        <section class="s4">
+            <div class="wrap">
+                 <img src="tom.jpg" id="EDMpic3">
+                  <h5 class="h6" style="right:600px; top:240px;">Tommorow Land</h5>
+                <p class="t1" style="top:100px;">
+                    Tomorrowland is a Belgium electronic dance music festival held in Boom, Belgium. Tomorrowland was first held in 2005 and has since become one of the world's largest and most notable music festivals.[2] It now stretches over 2 weekends and it usually sells out in minutes.</p> 
+            </div>
+        </section>
+        <section class="s5">
+            <div class="wrap dgray">
+                <h5 class="h6">Explore the Ultra Miami <br>
+                    2020 Phase 1 Lineup</h5>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fn4GYb_MYAg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+           </section>
+        <section class="s6">
+            <div class="wrap dgray">
+                <h5 class="h6">Tomorrow Land 2019 After Movie</h5>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/hvIg3PTJWxs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+           <section class="s7">
+            <div class="wrap dgray">
+                <h5 class="h6">EDC Las Vegas 2020 Official Trailer</h5>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/EChd8F4mw_g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+            <section class="s8">
+            <div class="wrap dgray" style="top:-300px";>
+                <h5 class="h4">EDM 페스티벌이란?</h5>
+            </div>
+        </section>
+
+            <section class="s9">
+            <div class="wrap" style="top:-700px"; >
+            
+                <p class="t3" style="top:-500px;">
+                   여러 DJ들의 공연을 포함하여 수일간 진행되는 대규모 야외 음악 축제. 사실 DJ뿐만 아니라 인디 팝 밴드 등도 많이 출현한다.
+
+록 페스티벌과 마찬가지로 1960년대부터 역사가 시작되었다. 과거에는 '일렉트로니카' 페스티벌이라고 불리지 않고 팝 뮤직 내지 아니면 뭉뚱그려 뮤직 페스티벌의 하위 장르로 분류되었었다.
+
+과거에는 테크노, 딥 하우스, 트랜스등의 비교적 팬 수가 적은 비주류 장르 위주였지만 현재는 일렉트로니카의 유행과 더불어 EDM씬의 활발해짐에 따라 다양한 장르를 접해 볼 수 있다. 요즈음의 페스티벌이 다 그렇지만, 록 페스티벌이라고 적혀있는데 일렉트로니카 아티스트가 굉장히 많이 찾아보는 것을 볼 수 있었다. 이제는 거의 대부분이 그냥 뮤직 페스티벌이라는 이름으로 열리고 있다.[1] 지금 현재 페스티벌들의 라인업을 잘 살펴보면 일렉 위주인지, 락 위주인지, 혹은 다른 장르와 섞여 있는지 알 수 있다.
+
+최근에는 락 페스티벌 만큼이나 유투브를 통해 생방송, 혹은 라디오로 중계를 해주는 경우가 굉장히 많아 날을 잘 맞춰보면 실시간으로 볼 수 있다. 집에서 듣는 것과 현장에서 직접 듣는 것과는 하늘과 땅 차이 그 몇 배 이상으로 엄창나게 차이가 나니 고민하고 있으면 그냥 가기를 바란다. 특히 일렉페는 락페와 다르게 가격도 상대적으로 저렴한 편이다. 너무 저렴하면 운영이 개판 수준인게 문제
+
+대한민국에서 열리고 있는 일렉페는 전부 EDM페스티벌이라고 봐야할 정도로 주류 장르가 대다수이며 매니아한 장르를 접해 볼 수 있는 기회는 매우 어렵다. 다른 장르에 비해서 세부적인 장르에 대한 팬이 적다보니 어쩔 수 없는 상황. 하지만 실질적으로 EDM씬에서 활약하고 있는 DJ들 뿐만 아니라 인지도 높은 일렉트로니카 위주의 밴드, 매우 매니악한 장르를 구사하고 있는 DJ들을 한 페스티벌에서 볼 수 있는 경우는 모든 나라를 둘러 봐도 매우 매우 드물다. EDC, Tomorrowland, UMF정도의 세계구급 규모가 아니면 매우 다양한 장르를 한번에 접하는 것은 불가능하다고 봐야 한다.
+
+2017년 기준으로 대한민국에서 꾸준히 열리고 있는 페스티벌은 대표적으로 World DJ Festival, 울트라 코리아, 5tardium 등이 있으며, World Club Dome Korea가 이번에 새로 들어왔다. 월드 디제이 페스티벌을 제외하면 전부 해외 라이센스를 들여온 경우. Sensation, SEMF같이 몇 년 열리지 못하고 소리 없이 사라지는 경우도 많다.
+
+DJ들이 페스티벌 뿐만 아니라 클럽으로도 공연을 가기 때문에 시기를 잘 조율해야 할 때도 있다. 어떤 라인업이 올지 궁금하다면 락페가 비슷하게 주변 나라에서 누가 오는지를 잘 보면 된다. 락페만큼이나 그 이상으로 한국의 열광적인 반응이 효과가 대단한 장르가 일렉이기도 한데, 대부분 말을 들어보면 '사람들이 쉴 생각이 없는 것 같다' 정도로 잘 노는 편. 떼창같은 부분은 영어권 국가도 아닌데다가 애초 일렉트로니카가 보컬이 강조되는 음악이 아니다보니 상대적으로 두드러지게 호응을 내기가 어렵지만 전체적인 반응은 어느 나라를 둘러봐도 손색이 없을 정도로 매우 좋다.</p> 
+            </div>
+        </section>
+   
+    <footer><div class="wrap" style="width:100%;height: 100px; background-color: #282322;">
+        <p style="font-size: 20px; color:white;position: absolute;left:50%; transform:translateX(80%);top:40px;">Copyrightⓒ2019 EDMfestival All rights reserved.</p>
+    </div></footer>
+    <script type="text/javascript">
+        
+        button.onclick = function(){
+                dj.style.animation = "fly 1s ease-in forwards";
+                box1.style.animation ="disappear 1s 1s forwards";
+                EDM.style.animation = "appear 1s 1s forwards";
+                page1.style.overflow = "visible";
+
+                var t = document.getElementsByTagName("section");
+                for(var i=0; i<t.length; i++){
+                    t[i].style.display = "block";
+                }
+
+                var s = document.getElementsByTagName("footer")[0];
+                s.style.display = "block";
+        }
+
+        
+
+        
+    </script>
+</body>
+</html>
